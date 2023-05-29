@@ -1,0 +1,14 @@
+
+
+namespace Services.ServiceInterface
+{
+    public interface IService<TEntity> where TEntity : class
+    {
+        IEnumerable<TEntity> GetAll();
+        TEntity Find(object Id);
+        void Add(TEntity entity);
+        void Update(TEntity entity);
+        void Remove(TEntity entity);
+        void Delete(object Id);
+    }
+}
